@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0B132B;
+    color: #0F172A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* Executive Precision Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.5);
+}
+
+/* Executive Status Pulse */
+@keyframes pulse-corp {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.92); }
+}
+
+.animate-pulse-corp {
+  animation: pulse-corp 2s infinite ease-in-out;
+}
